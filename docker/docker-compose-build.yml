@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  IOT-silence-functions:
+    build: ..
+    image: quay.io/guidesmiths/svc-example:latest
+    links:
+
+
+
+
+
+
+
+
+
