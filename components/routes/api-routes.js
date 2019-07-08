@@ -31,6 +31,15 @@ module.exports = () => {
       res.send('IOT functions');
     });
 
+    app.post('/slack/silence', (req, res) => {
+      console.log('Send command');
+      console.log(req.query);
+      console.log(req.params);
+      console.log(req.body);
+      console.log('Response sended');
+      res.json({ sucess: true });
+    });
+
 
     app.use(handleError);
 
