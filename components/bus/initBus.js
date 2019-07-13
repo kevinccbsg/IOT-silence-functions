@@ -26,7 +26,7 @@ module.exports = () => {
       // const testQueue = publish('test-queue');
       // await testQueue('My third message 5');
 
-      // subscribe('test-queue', (err, data) => {
+      // subscribe('send-sign-on', (err, data) => {
       //   console.log('obj 2');
       //   console.log(data);
       // });
