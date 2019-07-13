@@ -8,8 +8,12 @@ module.exports = {
     dbName: 'time-off',
     url: process.env.MONGO_URL || 'mongodb://localhost:27017',
   },
+  bus: {
+    url: process.env.BUS_URL || 'amqp://localhost',
+    extra: '',
+  },
   controller: {
-    urlWebhook: 'https://hooks.slack.com/services/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',
+    urlWebhook: process.env.WEBHOOK || 'https://hooks.slack.com/services/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',
     method: 'post',
   },
   service: { reload: { window: '60s' } },
