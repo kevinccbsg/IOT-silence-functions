@@ -3,4 +3,4 @@ const initController = require('./initController');
 
 module.exports = new System({ name: 'controller' })
   .add('controller', initController())
-  .dependsOn('store', 'config');
+  .dependsOn('store', 'config', 'bus', 'logger');
