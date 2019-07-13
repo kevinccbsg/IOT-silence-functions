@@ -1,5 +1,5 @@
 const { MongoClient } = require('mongodb');
-const { requestSilence, requestSilenceOff } = require('./storeAPI');
+const { requestSilence, requestSilenceOff, isSilenceRequested } = require('./storeAPI');
 
 module.exports = () => {
   const start = async ({ config }) => {
@@ -13,9 +13,10 @@ module.exports = () => {
     const api = ({ request }) => ({
       requestSilence: requestSilence(request),
       requestSilenceOff: requestSilenceOff(request),
+      isSilenceRequested: isSilenceRequested(request),
     });
 
-    return api({ requestColllection });
+    return api({ request: requestColllection });
   };
 
   return { start };

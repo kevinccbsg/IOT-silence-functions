@@ -8,6 +8,10 @@ module.exports = {
     dbName: 'time-off',
     url: process.env.MONGO_URL || 'mongodb://localhost:27017',
   },
+  controller: {
+    urlWebhook: 'https://hooks.slack.com/services/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',
+    method: 'post',
+  },
   service: { reload: { window: '60s' } },
   logger: {
     transport: 'bunyan',
