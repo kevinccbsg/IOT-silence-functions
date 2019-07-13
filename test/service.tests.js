@@ -4,17 +4,17 @@ const supertest = require('supertest');
 
 describe('Service Tests', () => {
   let request;
-  let sys;
+  const sys = system();
 
   before(done => {
-    sys = system().start((err, { app }) => {
+    sys.start((err, { app }) => {
       if (err) return done(err);
       request = supertest(app);
       done();
     });
   });
 
-  after(done => sys.stop(done));
+  after(() => sys.stop());
 
   it('should return manifest', () =>
     request
