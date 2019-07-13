@@ -14,7 +14,9 @@ describe('Service Tests', () => {
     });
   });
 
-  after(() => sys.stop());
+  after(done => {
+    sys.stop(() => done());
+  });
 
   it('should return manifest', () =>
     request

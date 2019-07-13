@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "server": "supervisor .",
-    "test": "mocha test",
+    "test": "SERVICE_ENV=test mocha test --exit",
     "lint": "eslint .",
     "qa": "npm run lint && npm run test",
     "precommit": "npm run lint",
