@@ -13,7 +13,7 @@ module.exports = {
     extra: '',
   },
   controller: {
-    urlWebhook: process.env.WEBHOOK || 'https://hooks.slack.com/services/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',
+    urlWebhook: process.env.WEBHOOK,
     method: 'post',
   },
   service: { reload: { window: '60s' } },

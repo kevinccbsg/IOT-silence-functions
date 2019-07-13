@@ -24,10 +24,7 @@ module.exports = () => {
       };
 
       // const testQueue = publish('test-queue');
-
-      // setInterval(async () => {
-      //   await testQueue('My third message 5');
-      // }, 1000);
+      // await testQueue('My third message 5');
 
       // subscribe('test-queue', (err, data) => {
       //   console.log('obj 2');
