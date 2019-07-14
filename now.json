@@ -1,8 +1,0 @@
-{
-  "name": "zeit-iot-silence",
-  "env": {
-    "MY_VARIABLE": "@mongo_url",
-    "BUS_URL": "@bus_url",
-    "WEBHOOK": "@webhook"
-  }
-}

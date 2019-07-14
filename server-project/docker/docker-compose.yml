@@ -1,0 +1,16 @@
+version: '2'
+services:
+  IOT-silence-functions-db:
+    image: mongo:3.6
+    command: mongod
+    ports:
+      - "27017:27017"
+
+
+
+
+
+
+
+
+
