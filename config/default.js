@@ -1,7 +1,7 @@
 module.exports = {
   server: {
     host: '0.0.0.0',
-    port: 3000,
+    port: process.env.PORT || 3000,
     shutdown: { delay: '5s' },
   },
   store: {
