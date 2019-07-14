@@ -4,6 +4,7 @@ module.exports = () => {
   let connection;
   const start = async ({ logger, config }) => {
     try {
+      logger.info(`Bus connection on: ${config.url}`);
       connection = await amqp.connect(config.url);
       const channel = await connection.createChannel();
 
