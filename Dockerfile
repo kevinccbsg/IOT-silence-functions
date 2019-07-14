@@ -4,13 +4,13 @@ FROM node:10.4
 WORKDIR /usr/src/app
 
 # Install app dependencies
-COPY package*.json ./
+COPY ./server-project/package*.json ./
 
 RUN npm install
 
 # Bundle app source
-COPY . .
+COPY ./server-project .
 
-EXPOSE 4000
+EXPOSE 3000
 
 ENTRYPOINT [ "npm", "start" ]
