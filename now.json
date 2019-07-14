@@ -1,5 +1,10 @@
 {
+  "version": 2,
   "name": "zeit-iot-silence",
+  "public": true,
+  "builds": [
+    { "src": "index.js", "use": "@now/node" },
+  ],
   "env": {
     "MY_VARIABLE": "@mongo_url",
     "BUS_URL": "@bus_url",

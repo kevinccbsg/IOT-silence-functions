@@ -6,10 +6,10 @@ module.exports = {
   },
   store: {
     dbName: 'time-off',
-    url: process.env.MONGO_URL || 'mongodb://localhost:27017',
+    url: process.env.MONGO_URL,
   },
   bus: {
-    url: process.env.BUS_URL || 'amqp://localhost',
+    url: process.env.BUS_URL,
     extra: '',
   },
   controller: {
