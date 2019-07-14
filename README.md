@@ -21,6 +21,8 @@ npm start
 ```
 docker run -d --name amqp.test -p 5672:5672 rabbitmq
 ```
+*Note*: This command will be moved to docker-compose.yml file
+
 
 ```
 npm run docker
