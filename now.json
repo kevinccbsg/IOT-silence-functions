@@ -3,7 +3,7 @@
   "name": "zeit-iot-silence",
   "public": true,
   "builds": [
-    { "src": "index.js", "use": "@now/node" },
+    { "src": "index.js", "use": "@now/node" }
   ],
   "env": {
     "MY_VARIABLE": "@mongo_url",
