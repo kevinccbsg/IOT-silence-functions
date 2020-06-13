@@ -16,6 +16,23 @@ module.exports = {
     urlWebhook: process.env.WEBHOOK,
     method: 'post',
   },
+  routes: {
+    admin: {
+      swaggerOptions: {
+        info: {
+          description: 'Documentation for IOT Silence API',
+          title: 'IOT Silence API',
+          version: '1.0.0',
+          contact: {
+            name: 'Kevin Martínez',
+            email: 'kevinccbsg@gmail.com',
+          },
+        },
+        baseDir: process.cwd(),
+        filesPattern: './**/**-routes.js',
+      },
+    },
+  },
   service: { reload: { window: '60s' } },
   logger: {
     transport: 'bunyan',

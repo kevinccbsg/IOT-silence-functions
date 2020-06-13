@@ -1,15 +1,18 @@
+const expressJSDocSwagger = require('express-jsdoc-swagger');
+
 module.exports = () => {
-  const start = ({ manifest = {}, app }, cb) => {
+  const start = ({ manifest = {}, app, config }, cb) => {
+    const { swaggerOptions } = config;
+    expressJSDocSwagger(app)(swaggerOptions);
+
+    /**
+     * GET /__/manifest
+     * @summary Get manifest state
+     * @tags admin - Everything about admin tasks
+     * @return {object} default - Return manifest file
+     */
     app.get('/__/manifest', (req, res) => res.json(manifest));
-    app.post('/__/error', () => {
-      setTimeout(() => process.emit('error', new Error('On Noes')));
-    });
-    app.post('/__/crash', () => {
-      setTimeout(() => undefined.meh);
-    });
-    app.post('/__/reject', () => {
-      setTimeout(() => Promise.reject(new Error('Oh Noes')));
-    });
+
     cb();
   };
 

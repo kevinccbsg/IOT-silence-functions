@@ -24,10 +24,23 @@ module.exports = () => {
       return errors[err.type || 'server_error'];
     };
 
+    /**
+     * GET /
+     * @summary Return API title or Info
+     * @tags admin - Everything about admin tasks
+     * @return {string} default - Return manifest file - text/html
+     */
     app.get('/', (req, res) => {
       res.send('IOT functions');
     });
 
+    /**
+     * POST /slack/silence
+     * @summary Request silence message
+     * @tags Slack - Everything about slack integration
+     * @param {SilenceRequest} request.body.required - Request object to ask for silence
+     * @return {string} default - Return manifest file - text/plain
+     */
     app.post('/slack/silence', async (req, res, next) => {
       const { text, user_id: userId } = req.body;
       try {
@@ -39,6 +52,13 @@ module.exports = () => {
       }
     });
 
+    /**
+     * POST /slack/silence-off
+     * @summary Request silence message
+     * @tags Slack - Everything about slack integration
+     * @param {SilenceRequest} request.body.required - Request object to ask for silence
+     * @return {string} default - Return manifest file - text/plain
+     */
     app.post('/slack/silence-off', async (req, res, next) => {
       const { text, user_id: userId } = req.body;
       try {
